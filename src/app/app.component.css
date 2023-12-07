@@ -1,0 +1,36 @@
+@import url('./my-common-component.css');
+
+nav {
+    background-color: rgb(192,192,192);
+    position:fixed;
+    width:100%;
+    padding-top:10px;
+    padding-bottom: 10px;
+    top:0%;
+    left: 0%;               
+    text-align: center;
+}
+
+a {
+    text-decoration: none;  /* no underline links */
+    display: inline;
+    padding:10px;
+    color: black;
+    font-weight: 500;
+}
+
+footer {
+    background-color: rgb(192,192,192, 0.6);
+    position:fixed;
+    width:100%;
+    padding-top:10px;
+    padding-bottom: 10px;
+    bottom:0%;
+    left: 0%;               
+    text-align: center;
+    color: black;
+}
+
+.active {
+    background-color: red;
+}

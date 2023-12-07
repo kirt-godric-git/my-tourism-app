@@ -1,0 +1,67 @@
+<!-- <p>tech-ideas works!</p> -->
+<h1>Innovative Ideas</h1>
+
+<form [formGroup]="techIdeasForm">
+    <!-- class "form-group" and "form-control" is a bootstrap styling to group Label and Input tags together in top-below styling... -->
+    <div class="form-group">
+        <label for="userName">Name </label>
+        <input type="text" id="userName" formControlName="name" class="form-control">
+        <span *ngIf="techIdeasForm.get('name')!.touched && techIdeasForm.get('name')!.errors?.['required']"> 
+            Please insert your name.
+        </span>
+        <span *ngIf="nameFormControl.touched && nameFormControl.errors?.['minlength']"> 
+            Your name should be more than 2 letters.
+        </span>
+        <span *ngIf="nameFormControl.dirty && nameFormControl.errors?.['prohibited']"> 
+            The name cannot contain the word 'tourist.'
+        </span>
+    </div>
+    <br/>
+    <div class="form-group">
+        <label for="userEmail">E-mail </label>
+        <input type="email" id="userEmail" formControlName="email" class="form-control">
+        <span *ngIf="emailFormControl.touched && emailFormControl.errors?.['required']"> 
+            Please insert your email.
+        </span>
+        <span *ngIf="emailFormControl.touched && emailFormControl.errors?.['email']"> 
+            Please insert a valid email.
+        </span>
+        <span *ngIf="emailFormControl.dirty && emailFormControl.errors?.['prohibited']"> 
+            The email cannot contain the word 'hacker.'
+        </span>
+    </div>
+    <br/>
+    <div class="form-group">
+        <label for="userAge">Age </label>
+        <input type="text" id="userAge" formControlName="age" class="form-control">
+        <span *ngIf="ageFormControl.touched && ageFormControl.errors?.['notintegervalue']"> 
+            Please insert a valid whole integer number.
+        </span>
+    </div>
+    <br/>
+    <div>
+        <label for="targetCity">Target City </label>
+        <select id="targetCity" formControlName="city" >
+            <option value="{{cities}}" *ngFor="let city of cities">{{city}}</option>
+        </select>
+        <span *ngIf="cityFormControl.touched && cityFormControl.errors?.['required']"> 
+            Please choose a city.
+        </span>
+    </div>
+    <br/>
+    <div class="form-group">
+        <label for="brief">Brief about of your technical idea: </label>
+        <textarea rows="4" cols="50" id="brief" formControlName="briefDesc" class="form-control"></textarea>
+        <span *ngIf="briefDescFormControl.touched && briefDescFormControl.errors?.['required']"> 
+            Please insert a brief about your project.
+        </span>
+        <span *ngIf="briefDescFormControl.touched && briefDescFormControl.errors?.['minLength']"> 
+            Your brief technical idea should be more than 99 characters
+        </span>
+        <span *ngIf="briefDescFormControl.touched && briefDescFormControl.errors?.['prohibited']"> 
+            Your project description cannot contain the word "nothing."
+        </span>
+    </div>
+    <br/>
+    <button type="submit" (click)="onSubmit()" [disabled]="techIdeasForm.invalid">Submit</button>
+</form>

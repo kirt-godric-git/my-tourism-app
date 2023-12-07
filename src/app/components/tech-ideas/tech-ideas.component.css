@@ -1,0 +1,23 @@
+@import url('../../my-common-component.css');
+
+label {
+    font-weight: bold;
+    padding-top: 10px;
+    padding-right: 25px;
+}
+
+form {
+    background-color: lightgray;
+    padding-top: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 15px;
+}
+
+span {
+    color: red;
+}
+
+button {
+    background-color: green;
+}

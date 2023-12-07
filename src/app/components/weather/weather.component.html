@@ -1,0 +1,15 @@
+<!-- <p>weather works!</p> -->
+
+<br/>
+<div>
+    <ul>
+        <!-- OK working as list without bullet: design & functionality achieve here... -->
+        <li *ngFor="let weather of weatherData" class="styleCities">
+            <a [routerLink]="['/weather', weather.name, weather.springN, weather.springM, weather.summerN, weather.summerM, weather.winterN, weather.winterM, weather.autumN, weather.autumM, weather.visitFrom, weather.visitTo]">{{ weather.name }}</a>
+        </li>
+        <!-- OK working as a buton: design & functionality achieve here... -->
+        <!-- <button *ngFor="let weather of weatherData" class="removeBullet">
+            <a [routerLink]="['/weather', weather.name, weather.springN, weather.springM, weather.summerN, weather.summerM, weather.winterN, weather.winterM, weather.autumN, weather.autumM, weather.visitFrom, weather.visitTo]">{{ weather.name }}</a>
+        </button> -->
+    </ul>
+</div>

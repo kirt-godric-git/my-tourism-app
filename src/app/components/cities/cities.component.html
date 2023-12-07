@@ -1,0 +1,21 @@
+<!-- <p>cities works!</p> -->
+
+<div class="mainDivStyle">
+  <ul>
+    <!-- <li *ngFor="let city of cities" [ngClass]="{'cities-green': color, 'cities-black': !color}"> --> <!-- NOT OK-->
+    <!-- <li *ngFor="let city of cities" [ngClass]="{'cities-green': city.attractionSites.length >= 3, 'cities-black': city.attractionSites.length < 3}"> --> <!-- OK Working-->
+    <li *ngFor="let city of cities; index as i" [ngClass]="{'cities-green': color[i], 'cities-black': !color[i]}">  <!-- OK Working-->
+      {{city.name}}
+      <ul>
+        <!-- Will output as sub list -->
+        <!-- <li *ngFor="let attraction of city.attractionSites" id="attractionSites">
+            {{attraction}}
+        </li> -->
+        <!-- Will output as: Abu-Simble,Nubian Museum,Elephantine -->
+        <!-- <p id="attractionSites">{{city.attractionSites}}</p>  -->
+        <!-- Will output as: Abu-Simble, Nubian Museum, Elephantine -->
+        <span id="attractionSites">{{city.attractionSites.join(', ')}}</span>
+      </ul>
+    </li>
+</ul>
+</div>

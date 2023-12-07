@@ -1,0 +1,9 @@
+@import url('../../my-common-component.css');
+
+#appName {
+    font-size: 20px;
+}
+
+#aim {
+    font-weight: bold;
+}

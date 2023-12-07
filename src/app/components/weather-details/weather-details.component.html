@@ -1,0 +1,50 @@
+<!-- <p>weather-details works!</p> -->
+<div class="mainDivStyle">
+<!-- <div ng-class="{mainDivStyle divCenter : true}"> -->
+
+    <table>
+        <caption>Weather in {{name}}</caption>
+        <tr>
+            <th colspan="2" class="th1">Spring</th>
+            <th colspan="2" class="th1">Summer</th>
+            <th colspan="2" class="th1">Autum</th>
+            <th colspan="2" class="th1">Winter</th>
+        </tr>
+        <tr>
+            <th class="th2">Spring Morning</th>
+            <th class="th2">Spring Evening</th>
+            <th class="th2">Summer Morning</th>
+            <th class="th2">Summer Evening</th>
+            <th class="th2">Autum Morning</th>
+            <th class="th2">Autum Evening</th>
+            <th class="th2">Winter Morning</th>
+            <th class="th2">Winter Evening</th>
+        </tr>
+        <tr>
+            <td>{{springM}}&deg;C</td>
+            <td>{{springN}}&deg;C</td>
+            <td>{{summerM}}&deg;C</td>
+            <td>{{summerN}}&deg;C</td>
+            <td>{{autumM}}&deg;C</td>
+            <td>{{autumN}}&deg;C</td>
+            <td>{{winterM}}&deg;C</td>
+            <td>{{winterN}}&deg;C</td>
+        </tr>
+    </table>
+    
+    <!-- Custom directive: see /directives/important-text.directive.ts check [appImportantText] -->
+    <div appImportantText>
+        The most suitable time to enjoy your holiday in {{name}} would be between {{visitFrom}} to {{visitTo}}
+    </div>
+    <!-- OK working -->
+    <!-- <br/>
+    <div style="text-align: center;">
+        <button>
+            <a href="/weather">Back to List of City-Weather</a>
+        </button>
+    </div> -->
+    <br/>
+    <div style="text-align: center;">
+        <a href="/weather" class="btn btn-primary">Back to List of City-Weather</a>
+    </div>
+</div>

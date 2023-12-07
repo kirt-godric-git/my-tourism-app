@@ -1,0 +1,21 @@
+@import url('../../my-common-component.css');
+
+.cities-black {
+    color: black;
+    font-weight: bold;
+}
+
+.cities-green {
+    color: green;
+    font-weight: bold;
+}
+
+#attractionSites {
+    /* NOT working for resetting CSS style */
+    /* all: unset; */ 
+    /* OK working for resetting CSS style */
+    /* all: initial;*/
+    font-style: normal;
+    font-weight: normal;
+    color: black;
+}
